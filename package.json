@@ -1,6 +1,6 @@
 {
-  "name": "portfoliov2",
-  "version": "0.0.1",
+  "name": "portfolio",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,6 +10,9 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "eslint ."
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.0.0",
@@ -28,8 +31,5 @@
     "typescript": "^5.0.0",
     "typescript-eslint": "^8.0.0-alpha.20",
     "vite": "^5.0.3"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.5"
   }
 }
