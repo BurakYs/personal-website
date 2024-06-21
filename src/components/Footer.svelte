@@ -48,7 +48,7 @@
                     </span>
                     by
                     <a href={'https://github.com/' + config.social.github}>
-                        <span class="text-theme-color font-bold underline">
+                        <span class="text-theme-color font-bold">
                             {config.social.github}
                         </span>
                     </a>
@@ -57,7 +57,7 @@
             <div class="block sm:hidden">
                 <span class="px-1 dark:text-white items-center md:font-medium">
                     Developed by
-                    <span class="text-theme-color font-bold underline">
+                    <span class="text-theme-color font-bold">
                         {config.name}
                     </span>
                 </span>
