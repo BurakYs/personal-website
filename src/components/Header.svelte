@@ -54,12 +54,12 @@
             </button>
         </div>
         <div class="space-x-7 hidden sm:flex">
-            {#each navbarItems as title}
+            {#each navbarItems as item}
                 <a
-                        href={title.url.toLowerCase()}
-                        class="text-lg translation duration-300 {$page.url.pathname === title.url ? 'text-theme-color': 'text-black/75 hover:text-theme-color dark:text-white/50 dark:hover:text-white'}"
+                        href={item.url}
+                        class="text-lg translation duration-300 {$page.url.pathname === item.url ? 'text-theme-color': 'text-black/75 hover:text-theme-color dark:text-white/50 dark:hover:text-white'}"
                 >
-                    {title.title}
+                    {item.title}
                 </a>
             {/each}
         </div>
@@ -74,11 +74,11 @@
 
         {#if isOpen}
             <div class="border-[1px] border-[#e2e3e5] dark:border-[#1a1a1c] bg-[#fafcfb] dark:bg-[#151516] w-full mx-auto h-16 px-10 py-2 flex justify-between text-gray-font left-0 fixed bottom-0 shadow-lg z-40 border-t border-gray-99">
-                {#each navbarItems as title}
+                {#each navbarItems as item}
                     <a href={title.url.toLowerCase()}>
-                        <span class="px-2 py-1 cursor-pointer hover:bg-primary-dark/25 dark:text-white text-black text-sm rounded-md flex flex-col items-center text-center {$page.url.pathname === title.url && '!text-theme-color'}">
-                            <i class={'w-8 p-1 fa-regular ' + title.icon}></i>
-                            <span class="mx-1 font-roboto">{title.title}</span>
+                        <span class="px-2 py-1 cursor-pointer dark:text-white text-black text-sm rounded-md flex flex-col items-center text-center {$page.url.pathname === item.url && '!text-theme-color'}">
+                            <i class={'w-8 p-1 fa-regular ' + item.icon}></i>
+                            <span class="mx-1">{item.title}</span>
                         </span>
                     </a>
                 {/each}
