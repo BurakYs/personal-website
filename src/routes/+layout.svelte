@@ -12,7 +12,6 @@
     <meta name="og:url" content={config.meta.url}>
     <meta name="twitter:description" content={config.meta.description}>
     <meta name="twitter:url" content={config.meta.url}>
-    <meta name="twitter:image" content={config.meta.image}>
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content={config.meta.theme}>
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,12 +1,12 @@
 export default {
     name: 'Burak',
     about: 'I\'m a student from Türkiye. I\'m a self-taught developer and I\'ve been coding for a several years now.',
+    image: 'https://avatars.githubusercontent.com/u/59135244?size=192',
     meta: {
         title: 'Burak',
         description: 'My personal website including my projects and skills',
         theme: '#009DFF',
-        url: 'https://buraky.live',
-        image: 'https://avatars.githubusercontent.com/u/59135244?size=192'
+        url: 'https://buraky.live'
     },
     social: {
         github: 'BurakYs',

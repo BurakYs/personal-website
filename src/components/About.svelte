@@ -9,7 +9,7 @@
                 <div class="mr-0 md:mr-8 flex shrink-0 justify-center">
                     <img
                             class="rounded-full ring-[3px] ring-main-theme w-44 h-44"
-                            src={config.meta.image}
+                            src={config.image}
                             alt="avatar"
                     />
                 </div>
