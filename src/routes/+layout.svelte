@@ -10,8 +10,6 @@
     <meta name="og:title" content={config.meta.title}>
     <meta name="og:description" content={config.meta.description}>
     <meta name="og:url" content={config.meta.url}>
-    <meta name="og:image" content={config.meta.image}>
-    <meta name='og:type' content='website'>
     <meta name="twitter:description" content={config.meta.description}>
     <meta name="twitter:url" content={config.meta.url}>
     <meta name="twitter:image" content={config.meta.image}>
