@@ -12,7 +12,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "lucide-svelte": "^0.395.0"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.0.0",

@@ -5,15 +5,10 @@ export default {
     theme: {
         extend: {
             colors: {
-                'back': {
-                    DEFAULT: '#101010'
-                },
-                'main-theme': {
-                    DEFAULT: '#009DFF'
-                },
-                'card': {
-                    DEFAULT: '#151515'
-                }
+                'primary-dark': '#101010',
+                'primary-light': '#F3F4F6',
+                'theme-color': '#009DFF',
+                'card': '#151515'
             }
         }
     },

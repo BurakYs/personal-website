@@ -1,5 +1,6 @@
 <script lang="ts">
     import config from '$config';
+    import { theme } from '$stores/theme';
 
     let color = 'text-red-500';
     let randomColor = () => {
@@ -16,20 +17,16 @@
         color = colors[random];
     };
 
-    let logo = {
-        discord: {
-            icon: 'discord',
+    let socials = [
+        {
             alt: 'Discord',
-            href: `https://discord.com/users/${config.social.discordId}`,
-            target: '_blank'
+            href: `https://discord.com/users/${config.social.discordId}`
         },
-        github: {
-            icon: 'github',
+        {
             alt: 'GitHub',
-            href: `https://github.com/${config.social.github}`,
-            target: '_blank'
+            href: `https://github.com/${config.social.github}`
         }
-    };
+    ];
 </script>
 
 <div class="p-5 mt-10 sm:mb-0 mb-16">
@@ -51,7 +48,7 @@
                     </span>
                     by
                     <a href={'https://github.com/' + config.social.github}>
-                        <span class="text-main-theme font-bold underline">
+                        <span class="text-theme-color font-bold underline">
                             {config.social.github}
                         </span>
                     </a>
@@ -60,19 +57,22 @@
             <div class="block sm:hidden">
                 <span class="px-1 dark:text-white items-center md:font-medium">
                     Developed by
-                    <span class="text-main-theme font-bold underline">
+                    <span class="text-theme-color font-bold underline">
                         {config.name}
                     </span>
                 </span>
             </div>
 
-            <div class="flex mr-4 text-md">
-                <a class="mr-5" href={logo.discord.href} target={logo.discord.target}>
-                    <i class={`fab fa-${logo.discord.icon} dark:text-white`}/>
-                </a>
-                <a href={logo.github.href} target={logo.github.target}>
-                    <i class={`fab fa-${logo.github.icon} dark:text-white`}/>
-                </a>
+            <div class="flex mr-4 text-md gap-x-5">
+                {#each socials as social}
+                    <a href={social.href} target="_blank">
+                        <img
+                                src={`https://cdn.simpleicons.org/${social.alt.toLowerCase()}/${$theme === 'dark' ? 'FFFFFF' : '000000'}`}
+                                alt={social.alt}
+                                class="w-6 h-6"
+                        />
+                    </a>
+                {/each}
             </div>
         </div>
     </div>

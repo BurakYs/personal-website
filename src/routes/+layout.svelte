@@ -21,7 +21,7 @@
     <link href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" rel="stylesheet">
 </svelte:head>
 
-<main class="dark:bg-back bg-[#f3f4f6] min-h-screen border-t-main-theme border-t-4 h-screen overflow-y-scroll">
+<main class="bg-primary-light dark:bg-primary-dark min-h-screen border-t-theme-color border-t-4 h-screen overflow-y-scroll">
     <div class="mx-auto max-w-5xl">
         <Header/>
         <slot/>

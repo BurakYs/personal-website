@@ -8,7 +8,7 @@
             <div class="w-full h-full mb-5 flex flex-col md:flex-row justify-center items-center">
                 <div class="mr-0 md:mr-8 flex shrink-0 justify-center">
                     <img
-                            class="rounded-full ring-[3px] ring-main-theme w-44 h-44"
+                            class="rounded-full ring-[3px] ring-theme-color w-44 h-44"
                             src={config.image}
                             alt="avatar"
                     />
@@ -18,7 +18,7 @@
                     <div class="flex justify-center md:justify-start">
                         <span class="text-4xl pl-3 font-bold flex-none dark:text-white">
                             Hey, I'm
-                            <span class="text-main-theme">
+                            <span class="text-theme-color">
                                 {config.name}
                             </span>
                         </span>
