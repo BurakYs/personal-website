@@ -1,7 +1,5 @@
 <script>
     import config from '$config';
-
-    const data = config.projects;
 </script>
 
 <div class="mt-10 mb-10 p-4">
@@ -13,7 +11,7 @@
     </p>
     <div class="flex justify-center">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
-            {#each data as project}
+            {#each config.projects as project}
                 <a href={project.url || '?'}>
                     <div class="border-[1px] border-[#e2e3e5] dark:border-[#1a1a1c] bg-[#fafcfb] dark:bg-[#151516] hover:scale-[1.02] rounded-md cursor-pointer transition-all duration-200 shadow-2xl">
                         <div class="p-5">

@@ -1,13 +1,12 @@
 export default {
-    title: 'Burak',
     name: 'Burak',
     about: 'I\'m a student from Türkiye. I\'m a self-taught developer and I\'ve been coding for a several years now.',
     meta: {
-        title: 'My Personal Website',
-        description: 'My personal website including my projects',
+        title: 'Burak',
+        description: 'My personal website including my projects and skills',
         theme: '#009DFF',
         url: 'https://buraky.live',
-        image: ''
+        image: 'https://avatars.githubusercontent.com/u/59135244'
     },
     social: {
         github: 'BurakYs',

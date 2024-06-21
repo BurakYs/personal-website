@@ -5,7 +5,6 @@
     onMount(async () => {
         const response = await fetch('/api/repositories');
         data = await response.json();
-        console.log(data);
     });
 </script>
 

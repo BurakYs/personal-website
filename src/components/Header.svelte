@@ -35,7 +35,7 @@
     <div class="flex justify-between items-center">
         <div class="flex items-center space-x-4">
             <a href="/" class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                {config.title}
+                {config.name}
             </a>
             <button
                     class="text-white bg-main-theme dark:bg-main-theme/75 w-10 p-1 rounded-md translation duration-300"

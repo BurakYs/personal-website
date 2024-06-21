@@ -32,7 +32,7 @@
     };
 </script>
 
-<div class="p-5 mt-10 sm:mb-0 mb-16 ">
+<div class="p-5 mt-10 sm:mb-0 mb-16">
     <div class="w-full items-center h-12">
         <div class="flex justify-between items-center">
             <div></div>
@@ -50,7 +50,7 @@
                         <i class="fas fa-heart text-lg"></i>
                     </span>
                     by
-                    <a href={'https://github.com/' +config.social.github}>
+                    <a href={'https://github.com/' + config.social.github}>
                         <span class="text-main-theme font-bold underline">
                             {config.social.github}
                         </span>
@@ -58,7 +58,7 @@
                 </span>
             </div>
             <div class="block sm:hidden">
-                <span class="px-1 dark:text-white items-center md:font-medium ">
+                <span class="px-1 dark:text-white items-center md:font-medium">
                     Developed by
                     <span class="text-main-theme font-bold underline">
                         {config.name}
