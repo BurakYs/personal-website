@@ -6,7 +6,7 @@ export default {
         description: 'My personal website including my projects and skills',
         theme: '#009DFF',
         url: 'https://buraky.live',
-        image: 'https://avatars.githubusercontent.com/u/59135244'
+        image: 'https://avatars.githubusercontent.com/u/59135244?size=192'
     },
     social: {
         github: 'BurakYs',
