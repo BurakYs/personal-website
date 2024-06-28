@@ -21,6 +21,12 @@ export default {
             url: 'https://buraky.live'
         },
         {
+            name: 'VidGet',
+            link: 'https://cdn.buraky.live/vidget.png',
+            description: 'A free online video downloader that allows you to download videos from various platforms.',
+            url: 'https://vidget.buraky.live'
+        },
+        {
             name: 'Rookie Spitfire',
             link: 'https://cdn.buraky.live/spitfire-banner.png',
             description: 'A Fortnite account management Discord bot',
