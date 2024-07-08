@@ -25,7 +25,7 @@ npm run dev
 
 - Set a GitHub token in a `.env` file.
 - Configure the `src/config.ts` file.
-- Change name, website link and GitHub user ID in the `src/app.html` file.
+- Change name, website link and GitHub user ID in the `src/config.ts` file.
 
 ## 📦 Built With
 

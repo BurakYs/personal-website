@@ -12,6 +12,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@eslint/js": "^9.6.0",
     "dotenv": "^16.4.5",
     "lucide-svelte": "^0.395.0"
   },
