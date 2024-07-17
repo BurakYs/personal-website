@@ -5,8 +5,7 @@ export default {
     meta: {
         title: 'Burak',
         description: 'My personal website including my projects and skills',
-        theme: '#009DFF',
-        url: 'https://buraky.live'
+        theme: '#009DFF'
     },
     social: {
         github: 'BurakYs',
@@ -24,7 +23,7 @@ export default {
             name: 'VidGet',
             link: 'https://cdn.buraky.live/vidget.png',
             description: 'A free online video downloader that allows you to download videos from various platforms.',
-            url: 'https://vidget.buraky.live'
+            url: 'https://vidget.xyz'
         },
         {
             name: 'Rookie Spitfire',

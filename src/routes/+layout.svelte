@@ -1,17 +1,19 @@
-<script>
-    import config from '$config';
-    import '$lib/styles/globals.css';
-    import Header from '$components/Header.svelte';
-    import Footer from '$components/Footer.svelte';
+<script lang="ts">
+  import '$lib/styles/globals.css';
+  import Header from '$components/Header.svelte';
+  import Footer from '$components/Footer.svelte';
+  import config from '$config';
+
+  import { page } from '$app/stores';
 </script>
 
 <svelte:head>
     <title>{config.meta.title}</title>
     <meta name="og:title" content={config.meta.title}>
     <meta name="og:description" content={config.meta.description}>
-    <meta name="og:url" content={config.meta.url}>
+    <meta name="og:url" content={$page.url.origin}>
     <meta name="twitter:description" content={config.meta.description}>
-    <meta name="twitter:url" content={config.meta.url}>
+    <meta name="twitter:url" content={$page.url.origin}>
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content={config.meta.theme}>
     <link rel="preconnect" href="https://fonts.googleapis.com">
