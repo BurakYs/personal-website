@@ -4,7 +4,7 @@ A simple portfolio website built with Svelte and Tailwind CSS.
 
 ## 📺 Demo
 
-https://buraky.live
+https://buraky.dev
 
 ## 🚀 Getting Started
 
