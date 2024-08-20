@@ -23,7 +23,7 @@ export default {
             name: 'VidGet',
             link: 'https://cdn.buraky.dev/vidget.png',
             description: 'A free online video downloader that allows you to download videos from various platforms.',
-            url: 'https://vidget.buraky.live'
+            url: 'https://vidget.buraky.dev'
         },
         {
             name: 'Rookie Spitfire',
