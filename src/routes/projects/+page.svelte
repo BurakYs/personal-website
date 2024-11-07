@@ -1,5 +1,5 @@
 <script>
-    import config from '$config';
+  import config from '$lib/config.js';
 </script>
 
 <div class="mt-10 mb-10 p-4">

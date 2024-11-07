@@ -1,6 +1,6 @@
 <script lang="ts">
-    import config from '$config';
-    import { theme } from '$stores/theme';
+  import config from '$lib/config';
+  import { theme } from '$lib/stores/theme';
 
     let color = 'text-red-500';
     let randomColor = () => {

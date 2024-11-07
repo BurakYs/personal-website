@@ -1,9 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { switchTheme, theme } from '$stores/theme';
+    import { switchTheme, theme } from '$lib/stores/theme';
     import { get } from 'svelte/store';
     import { page } from '$app/stores';
-    import config from '$config';
+    import config from '$lib/config';
 
     let isOpen = false;
     const updateOpen = () => {

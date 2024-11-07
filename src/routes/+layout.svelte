@@ -2,7 +2,7 @@
   import '$lib/styles/globals.css';
   import Header from '$components/Header.svelte';
   import Footer from '$components/Footer.svelte';
-  import config from '$config';
+  import config from '$lib/config';
 
   import { page } from '$app/stores';
 </script>

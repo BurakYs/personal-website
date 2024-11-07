@@ -1,5 +1,5 @@
 <script lang="ts">
-    import config from '$config';
+  import config from '$lib/config';
 </script>
 
 <div class="mt-20 mb-10">

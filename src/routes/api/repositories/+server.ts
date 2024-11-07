@@ -1,14 +1,11 @@
-import config from '$config';
+import config from '$lib/config';
 import { json } from '@sveltejs/kit';
-import dotenv from 'dotenv';
+import { GITHUB_TOKEN } from '$env/static/private';
 
-dotenv.config();
-
-/** @type {import('./$types').RequestHandler} */
 export async function GET() {
     const data = await fetch(`https://api.github.com/users/${config.social.github}/repos`, {
         headers: {
-            Authorization: `Token ${process.env.GITHUB_TOKEN}`
+            Authorization: `Token ${GITHUB_TOKEN}`
         }
     });
 
