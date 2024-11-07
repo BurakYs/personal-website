@@ -1,25 +1,13 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 
-const defaultTheme = 'dark';
+type Theme = 'light' | 'dark';
 
-function getTheme() {
-    if (browser) return localStorage.getItem('theme') || defaultTheme;
-    return defaultTheme;
-}
+const defaultTheme: Theme = 'dark';
+const initialTheme: Theme = browser
+  ? localStorage.getItem('theme') as Theme || defaultTheme
+  : defaultTheme;
 
-const theme = writable(getTheme());
+const theme = writable<Theme>(initialTheme);
 
-function switchTheme() {
-    theme.update(current => {
-        const newTheme = current === 'light' ? 'dark' : 'light';
-        if (browser) {
-            localStorage.setItem('theme', newTheme);
-            document.body.className = newTheme;
-        }
-
-        return newTheme;
-    });
-}
-
-export { theme, switchTheme };
+export default theme;
