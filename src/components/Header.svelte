@@ -4,17 +4,8 @@
 
   import themeStore from "$lib/stores/theme";
 
-  let isOpen = $state(false);
+  let showBottomNavbar = $state(false);
   const isDark = $derived($themeStore === "dark");
-
-  const updateOpen = () => {
-    isOpen = window.innerWidth <= 640;
-  };
-
-  function switchTheme() {
-    const newTheme = $themeStore === "light" ? "dark" : "light";
-    themeStore.set(newTheme);
-  }
 
   $effect(() => {
     updateOpen();
@@ -22,9 +13,18 @@
     return () => window.removeEventListener("resize", updateOpen);
   });
 
+  function updateOpen() {
+    showBottomNavbar = window.innerWidth <= 640;
+  }
+
+  function switchTheme() {
+    const newTheme = $themeStore === "light" ? "dark" : "light";
+    themeStore.set(newTheme);
+  }
+
   const navbarItems = [
-    { title: "Home", url: "/", icon: "fa-house" },
-    { title: "Projects", url: "/projects", icon: "fa-blog" },
+    { title: "Home", href: "/", icon: "fa-house" },
+    { title: "Projects", href: "/projects", icon: "fa-blog" },
   ];
 </script>
 
@@ -48,9 +48,9 @@
     <div class="space-x-7 hidden sm:flex">
       {#each navbarItems as item}
         <a
-          href={item.url}
+          href={item.href}
           class="text-lg translation duration-300 {$page.url.pathname ===
-          item.url
+          item.href
             ? 'text-theme-color'
             : 'text-black/75 hover:text-theme-color dark:text-white/50 dark:hover:text-white'}"
         >
@@ -72,15 +72,15 @@
       </button>
     </div>
 
-    {#if isOpen}
+    {#if showBottomNavbar}
       <div
         class="border-[1px] border-[#e2e3e5] dark:border-[#1a1a1c] bg-[#fafcfb] dark:bg-[#151516] w-full mx-auto h-16 px-10 py-2 flex justify-between text-gray-font left-0 fixed bottom-0 shadow-lg z-40 border-t border-gray-99"
       >
         {#each navbarItems as item}
-          <a href={item.url.toLowerCase()}>
+          <a href={item.href.toLowerCase()}>
             <span
               class="px-2 py-1 cursor-pointer dark:text-white text-black text-sm rounded-md flex flex-col items-center text-center {$page
-                .url.pathname === item.url && '!text-theme-color'}"
+                .url.pathname === item.href && '!text-theme-color'}"
             >
               <i class={"w-8 p-1 fa-regular " + item.icon}></i>
               <span class="mx-1">{item.title}</span>
