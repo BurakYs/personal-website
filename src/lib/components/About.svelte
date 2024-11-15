@@ -18,14 +18,14 @@
 
         <div class="mt-3 w-full text-center md:text-left">
           <div class="flex justify-center md:justify-start">
-            <span class="text-4xl pl-3 font-bold flex-none dark:text-white">
+            <span class="text-4xl pl-3 font-bold flex-none text-white">
               Hey, I'm
               <span class="text-theme-color">
                 {config.name}
               </span>
             </span>
           </div>
-          <p class="pl-3 text-md mt-1 dark:text-white/50">
+          <p class="pl-3 text-md mt-2 text-white/50">
             {config.about}
           </p>
         </div>

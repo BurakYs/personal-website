@@ -1,18 +1,12 @@
 <script lang="ts">
   import "$lib/styles/globals.css";
+
   import { page } from "$app/stores";
-  import Header from "$components/Header.svelte";
-  import Footer from "$components/Footer.svelte";
+  import Header from "$lib/components/Header.svelte";
+  import Footer from "$lib/components/Footer.svelte";
   import config from "$lib/config";
 
-  import themeStore from '$lib/stores/theme';
-
   let { children } = $props();
-
-  $effect(() => {
-    localStorage.setItem("theme", $themeStore);
-    document.body.className = $themeStore;
-  });
 </script>
 
 <svelte:head>
@@ -42,7 +36,7 @@
 </svelte:head>
 
 <main
-  class="bg-primary-light dark:bg-primary-dark min-h-screen border-t-theme-color border-t-4 h-screen overflow-y-scroll"
+  class="bg-primary min-h-screen border-t-theme-color border-t-4 h-screen overflow-y-scroll"
 >
   <div class="mx-auto max-w-5xl">
     <Header />

@@ -1,6 +1,5 @@
 <script lang="ts">
   import config from "$lib/config";
-  import themeStore from "$lib/stores/theme";
 
   const colors = [
     "text-red-500",
@@ -36,7 +35,7 @@
       <div></div>
       <div class="hidden sm:block">
         <span
-          class="ml-3 hidden sm:block dark:text-white items-center md:font-medium"
+          class="ml-3 hidden sm:block text-white items-center md:font-medium select-none"
         >
           Developed with
           <span
@@ -58,7 +57,7 @@
         </span>
       </div>
       <div class="block sm:hidden">
-        <span class="px-1 dark:text-white items-center md:font-medium">
+        <span class="px-1 text-white items-center md:font-medium">
           Developed by
           <span class="text-theme-color font-bold">
             {config.name}
@@ -70,7 +69,7 @@
         {#each socials as social}
           <a href={social.href} target="_blank">
             <img
-              src={`https://cdn.simpleicons.org/${social.alt.toLowerCase()}/${$themeStore === "dark" ? "FFFFFF" : "000000"}`}
+              src={`https://cdn.simpleicons.org/${social.alt.toLowerCase()}/FFFFFF`}
               alt={social.alt}
               class="w-6 h-6"
             />

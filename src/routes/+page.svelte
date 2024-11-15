@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Skills from "$components/Skills.svelte";
-  import About from "$components/About.svelte";
-  import GithubCard from "$components/Repositories.svelte";
+  import Skills from "$lib/components/Skills.svelte";
+  import About from "$lib/components/About.svelte";
+  import GithubCard from "$lib/components/Repositories.svelte";
 </script>
 
 <div class="mt-10 px-5">

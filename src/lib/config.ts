@@ -1,6 +1,6 @@
 export default {
   name: 'Burak',
-  about: 'I\'m a student from Türkiye. I\'m a self-taught developer and I\'ve been coding for a several years now.',
+  about: 'A student and a backend developer who loves to learn new things',
   image: 'https://avatars.githubusercontent.com/u/59135244?size=192',
   meta: {
     title: 'Burak',
