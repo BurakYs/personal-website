@@ -15,21 +15,15 @@ export default {
   },
   projects: [
     {
-      name: 'Personal Website',
-      link: 'https://cdn.buraky.dev/site.png',
-      description: 'A personal website built with Sveltekit and Tailwind CSS',
-      url: 'https://buraky.dev'
-    },
-    {
       name: 'VidGet',
-      link: 'https://cdn.buraky.dev/vidget.png',
-      description: 'A free online video downloader that allows you to download videos from various platforms.',
+      description: 'Multi-platform video and audio downloader',
+      thumbnail: 'https://cdn.buraky.dev/vidget.png',
       url: 'https://vidget.buraky.dev'
     },
     {
       name: 'Rookie Spitfire',
-      link: 'https://cdn.buraky.dev/spitfire-banner.png',
-      description: 'A Fortnite account management Discord bot',
+      description: 'Fortnite account management Discord bot',
+      thumbnail: 'https://cdn.buraky.dev/spitfire-banner.png',
       url: 'https://rookie-spitfire.xyz'
     }
   ],

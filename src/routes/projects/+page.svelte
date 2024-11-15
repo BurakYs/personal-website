@@ -9,21 +9,21 @@
       {#each config.projects as project}
         <a href={project.url || "?"}>
           <div
-            class="h-full border-[1px] border-[#1a1a1c] bg-[#151516] hover:scale-[1.02] rounded-md cursor-pointer transition-all duration-200 shadow-2xl p-5"
+            class="h-full border-[1px] border-[#1a1a1c] bg-[#151516] hover:scale-[1.02] rounded-md cursor-pointer transition-all duration-200 shadow-2xl"
           >
             <div class="flex justify-between items-center">
               <div class="items-center">
                 <img
-                  src={project.link}
+                  src={project.thumbnail}
                   alt={project.name}
-                  class="rounded-m aspect-video"
+                  class="rounded-m aspect-video p-1"
                 />
 
-                <div class="text-sm mt-3">
+                <div class="text-sm p-3">
                   <h1 class="font-bold text-white text-base">
                     {project.name}
                   </h1>
-                  <p class="text-white">
+                  <p class="text-gray-400">
                     {project.description}
                   </p>
                 </div>
