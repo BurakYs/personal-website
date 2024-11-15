@@ -27,11 +27,11 @@
           <div
             class="w-full h-full flex flex-col border-[1px] border-[#1a1a1c] bg-[#151516] shadow-lg rounded-md cursor-pointer hover:scale-[1.02] mt-2 pl-2 pr-2 sm:pl-0"
           >
-            <div class="rounded-lg px-2 md:px-4 lg:px-5 p-2 flex-grow">
+            <div class="rounded-lg py-3 px-2 md:px-4 flex-grow">
               <h1 class="text-lg font-medium text-white">
                 {repo.name}
               </h1>
-              <p class="text-sm font-normal text-gray-300 mt-2">
+              <p class="text-sm font-normal text-gray-400 mt-1">
                 {repo.description}
               </p>
             </div>
