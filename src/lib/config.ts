@@ -34,17 +34,14 @@ export default {
     }
   ],
   technologies: [
-    { name: 'HTML', slug: 'html5' },
-    { name: 'CSS', slug: 'css3' },
-    { name: 'Javascript', slug: 'javascript' },
-    { name: 'Node.js', slug: 'nodedotjs' },
+    { name: 'TypeScript', slug: 'typescript' },
+    { name: 'Node.js', slug: 'nodejs' },
     { name: 'MongoDB', slug: 'mongodb' },
-    { name: 'TailwindCSS', slug: 'tailwindcss' },
-    { name: 'Next.js', slug: 'nextdotjs' },
-    { name: 'Express', slug: 'express' },
-    { name: 'Fastify', slug: 'fastify' },
-    { name: 'React', slug: 'react' },
     { name: 'Svelte', slug: 'svelte' },
+    { name: 'React', slug: 'react' },
+    { name: 'Next.js', slug: 'nextjs' },
+    { name: 'Sass', slug: 'sass' },
+    { name: 'Tailwind CSS', slug: 'tailwindcss' },
     { name: 'Git', slug: 'git' }
   ]
 };

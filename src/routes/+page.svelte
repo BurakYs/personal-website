@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Skills from "$lib/components/Skills.svelte";
+  import Technologies from "$lib/components/Technologies.svelte";
   import About from "$lib/components/About.svelte";
   import GithubCard from "$lib/components/Repositories.svelte";
 </script>
@@ -8,6 +8,6 @@
   <About />
   <div class="mt-10">
     <GithubCard />
-    <Skills />
+    <Technologies />
   </div>
 </div>

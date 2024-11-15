@@ -20,7 +20,7 @@
           <div class="flex justify-between items-center">
             <img
               class="w-8 h-8 rounded-md mr-4"
-              src={`https://cdn.simpleicons.org/${tech.slug}`}
+              src={`https://raw.githubusercontent.com/devicons/devicon/master/icons/${tech.slug}/${tech.slug}-original.svg`}
               alt={tech.name}
               width="32"
               height="32"
