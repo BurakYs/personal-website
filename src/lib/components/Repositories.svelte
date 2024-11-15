@@ -18,20 +18,20 @@
   </div>
 
   <div class="w-full flex flex-wrap gap-3 mt-3">
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
       {#each data
         .filter((repo) => !repo.fork && ![repo.owner.login, ".github"].includes(repo.name))
         .slice(0, 6)
         .sort((a, b) => b.stargazers_count - a.stargazers_count) as repo}
         <a href={repo.html_url} target="_blank" class="w-full">
           <div
-            class="w-full h-full flex flex-col border-[1px] border-[#1a1a1c] bg-[#151516] shadow-lg rounded-md cursor-pointer hover:scale-[1.02] mt-2 pr-2"
+            class="w-full h-full flex flex-col border-[1px] border-[#1a1a1c] bg-[#151516] shadow-lg rounded-md cursor-pointer hover:scale-[1.02] mt-2 pl-2 pr-2 sm:pl-0"
           >
             <div class="rounded-lg px-2 md:px-4 lg:px-5 p-2 flex-grow">
               <h1 class="text-lg font-medium text-white">
                 {repo.name}
               </h1>
-              <p class="text-sm font-normal text-white mt-2">
+              <p class="text-sm font-normal text-gray-300 mt-2">
                 {repo.description}
               </p>
             </div>
