@@ -45,7 +45,7 @@
         class="bg-theme-color/75 font-medium p-2 w-32 translation duration-300 hover:bg-theme-color/60 rounded-md text-white"
       >
         <a
-          href={`https://discord.com/users/` + config.social.discordId}
+          href="https://discord.com/users/{config.social.discordId}"
           target="_blank"
         >
           Contact
