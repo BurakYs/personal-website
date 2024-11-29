@@ -1,5 +1,5 @@
 <script lang="ts">
-  import config from "$lib/config";
+  import config from '$lib/config';
 </script>
 
 <div class="mt-16">
@@ -17,7 +17,7 @@
         <div
           class="border-[1px] border-[#1a1a1c] bg-[#151516] shadow-lg rounded-lg p-2"
         >
-          <div class="flex justify-between items-center">
+          <div class="flex items-center">
             <img
               class="w-8 h-8 rounded-md mr-4"
               src={`https://raw.githubusercontent.com/devicons/devicon/master/icons/${tech.slug}/${tech.slug}-original.svg`}
@@ -25,9 +25,7 @@
               width="32"
               height="32"
             />
-            <div class="text-sm justify-end">
-              <p class="font-bold text-white">{tech.name}</p>
-            </div>
+            <p class="text-sm font-bold text-white">{tech.name}</p>
           </div>
         </div>
       </div>
