@@ -5,13 +5,13 @@ export default {
   meta: {
     title: 'Burak',
     description: 'My personal website including my projects and skills',
-    theme: '#009DFF'
+    favicon: 'https://avatars.githubusercontent.com/u/59135244?size=64'
   },
   social: {
     github: 'BurakYs',
     githubId: '59135244',
     twitter: 'BurakYhs_',
-    discordId: '269677849810698249'
+    discord: '269677849810698249'
   },
   projects: [
     {

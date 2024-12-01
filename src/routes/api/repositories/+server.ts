@@ -2,12 +2,24 @@ import config from '$lib/config';
 import { json } from '@sveltejs/kit';
 import { GITHUB_TOKEN } from '$env/static/private';
 
+const cacheDuration = 30_000;
+let cache: { data: any; timestamp: number } | null = null;
+
 export async function GET() {
-  const data = await fetch(`https://api.github.com/users/${config.social.github}/repos`, {
+  const now = Date.now();
+
+  if (cache && (now - cache.timestamp < cacheDuration)) {
+    return json(cache.data);
+  }
+
+  const response = await fetch(`https://api.github.com/users/${config.social.github}/repos`, {
     headers: {
       Authorization: `Token ${GITHUB_TOKEN}`
     }
   });
 
-  return json(await data.json());
+  const data = await response.json();
+  cache = { data, timestamp: now };
+
+  return json(data);
 }

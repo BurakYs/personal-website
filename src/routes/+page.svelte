@@ -1,13 +1,13 @@
 <script lang="ts">
-  import Technologies from "$lib/components/Technologies.svelte";
-  import About from "$lib/components/About.svelte";
-  import GithubCard from "$lib/components/Repositories.svelte";
+  import Technologies from '$lib/components/Technologies.svelte';
+  import About from '$lib/components/About.svelte';
+  import Repositories from '$lib/components/Repositories.svelte';
 </script>
 
-<div class="mt-10 px-5">
-  <About />
-  <div class="mt-10">
-    <GithubCard />
-    <Technologies />
+<div>
+  <About/>
+  <div class="flex flex-col gap-y-12">
+    <Repositories/>
+    <Technologies/>
   </div>
 </div>
