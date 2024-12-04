@@ -17,13 +17,13 @@ export default {
     {
       name: 'VidGet',
       description: 'Multi-platform video and audio downloader',
-      thumbnail: 'https://cdn.buraky.dev/vidget.png',
+      thumbnail: 'https://cdn.buraky.dev/banners/vidget.png',
       url: 'https://vidget.buraky.dev'
     },
     {
       name: 'Rookie Spitfire',
       description: 'Fortnite account management Discord bot',
-      thumbnail: 'https://cdn.buraky.dev/spitfire-banner.png',
+      thumbnail: 'https://cdn.buraky.dev/banners/rookie-spitfire.png',
       url: 'https://rookie-spitfire.xyz'
     }
   ],
