@@ -15,7 +15,7 @@
     Github Repositories
   </div>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
     {#each data
       .filter((repo) => !repo.fork && ![repo.owner.login, ".github"].includes(repo.name))
       .slice(0, 6)

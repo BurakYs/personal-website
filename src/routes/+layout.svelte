@@ -34,7 +34,7 @@
   />
 </svelte:head>
 
-<main class="bg-background min-h-screen border-t-4 border-theme-color h-screen overflow-y-scroll">
+<main class="bg-background min-h-[100dvh] border-t-4 border-theme-color h-screen overflow-y-scroll">
   <div class="mx-auto max-w-5xl px-5">
     <Header/>
     {@render children()}
