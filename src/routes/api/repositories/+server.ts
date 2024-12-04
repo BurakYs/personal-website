@@ -2,7 +2,7 @@ import config from '$lib/config';
 import { json } from '@sveltejs/kit';
 import { GITHUB_TOKEN } from '$env/static/private';
 
-const cacheDuration = 30_000;
+const cacheDuration = 5 * 60 * 1000;
 let cache: { data: any; timestamp: number } | null = null;
 
 export async function GET() {
