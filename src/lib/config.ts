@@ -16,7 +16,7 @@ export default {
     {
       title: 'VidGet',
       description: 'Multi-platform video and audio downloader',
-      thumbnail: 'https://cdn.buraky.dev/vidget.png',
+      thumbnail: 'https://cdn.buraky.dev/banners/vidget.png',
       url: 'https://vidget.buraky.dev',
       repository: 'https://github.com/BurakYs/VidGet',
       tags: ['Svelte', 'TailwindCSS', 'Fastify']
@@ -24,7 +24,7 @@ export default {
     {
       title: 'Rookie Spitfire',
       description: 'Fortnite account management Discord bot',
-      thumbnail: 'https://cdn.buraky.dev/spitfire-banner.png',
+      thumbnail: 'https://cdn.buraky.dev/banners/rookie-spitfire.png',
       url: 'https://rookie-spitfire.xyz',
       tags: ['TypeScript', 'MongoDB']
     }
