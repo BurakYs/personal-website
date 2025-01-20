@@ -1,8 +1,10 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+
   type SectionProps = {
     id: string;
     title: string;
-    children: any;
+    children: Snippet;
   }
 
   let { id, title, children }: SectionProps = $props();
