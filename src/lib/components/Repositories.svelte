@@ -27,7 +27,7 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {#each repositories as repo}
         <div
-          class="bg-gradient-to-r from-white/10 to-white/5 rounded-xl p-5 border border-white/10 hover:border-white/20 duration-150 group"
+          class="bg-gradient-to-r from-white/10 to-white/5 rounded-xl p-5 border border-white/10 hover:border-white/20 duration-150"
         >
           <div class="flex flex-col h-full">
             <div>
