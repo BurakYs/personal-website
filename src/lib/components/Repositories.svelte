@@ -1,45 +1,77 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import GitBranchIcon from 'lucide-svelte/icons/git-branch';
+  import GitForkIcon from 'lucide-svelte/icons/git-fork';
+  import StarIcon from 'lucide-svelte/icons/star';
+  import Section from '$components/Section.svelte';
 
-  let data: Record<string, any>[] = [];
+  import type { Repository } from '$lib/types';
 
-  onMount(async () => {
-    const response = await fetch('/api/repositories');
-    data = await response.json();
-  });
+  const languageColors: Record<string, string> = {
+    typescript: '#3178C6',
+    javascript: '#F7DF1E',
+    html: '#E34C26',
+    css: '#1572B6',
+    scss: '#CC6699',
+    svelte: '#FF3E00',
+    vue: '#4FC08D',
+    react: '#61DAFB',
+    angular: '#DD0031',
+    python: '#3776AB'
+  };
+
+  let { repositories }: { repositories: Repository[] } = $props();
 </script>
 
-<div>
-  <div class="text-2xl font-bold flex items-center text-white mb-1">
-    <i class="fab fa-github text-theme-color text-4xl mr-3"></i>
-    Github Repositories
-  </div>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-    {#each data
-      .filter((repo) => !repo.fork && ![repo.owner.login, ".github"].includes(repo.name))
-      .slice(0, 6)
-      .sort((a, b) => b.stargazers_count - a.stargazers_count) as repo}
-      <a href={repo.html_url} target="_blank">
-        <div class="h-full flex flex-col border border-border bg-foreground rounded-md cursor-pointer duration-200 hover:scale-[1.02] mt-2 px-2 md:pl-0">
-          <div class="rounded-lg py-3 px-2 md:px-4 flex-grow">
-            <h1 class="text-lg font-medium text-white">{repo.name}</h1>
-            <p class="text-sm font-normal text-gray-400 mt-1">{repo.description}</p>
-          </div>
-
-          <div class="flex justify-end items-center mb-3 mr-2 gap-x-5">
-            <div class="flex items-center">
-              <i class="fas fa-star text-yellow-400 mr-1"></i>
-              <span class="text-sm font-bold text-white">{repo.stargazers_count}</span>
+<Section id="repositories" title="GitHub Repositories">
+  {#if repositories?.length}
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {#each repositories as repo}
+        <div
+          class="bg-gradient-to-r from-white/10 to-white/5 rounded-xl p-5 border border-white/10 hover:border-white/20 duration-150 group"
+        >
+          <div class="flex flex-col h-full">
+            <div>
+              <h3 class="font-semibold mb-1 flex items-center">
+                {repo.name}
+              </h3>
+              <p class="text-sm text-gray-400 mb-4">{repo.description}</p>
             </div>
 
-            <div class="flex items-center">
-              <i class="fas fa-code-branch text-theme-color mr-1"></i>
-              <span class="text-sm font-bold text-white">{repo.forks_count}</span>
+            <div class="mt-auto flex items-center justify-between pt-4 border-t border-white/10">
+              <div class="flex items-center space-x-3 text-xs">
+                <span class="flex items-center text-white/60">
+                  <span
+                    class="size-2 rounded-full mr-1.5"
+                    style="background-color: {languageColors[repo.language?.toLowerCase()] || '#CBCBCB'}"
+                  ></span>
+                  {repo.language}
+                </span>
+                <span class="flex items-center text-white/60">
+                  <StarIcon class="size-3 mr-1"/>
+                  {repo.stars}
+                </span>
+                <span class="flex items-center text-white/60">
+                  <GitForkIcon class="size-3 mr-1"/>
+                  {repo.forks}
+                </span>
+              </div>
+
+              <a
+                href={repo.url}
+                class="flex items-center text-xs px-3 py-1.5 bg-white/10 hover:bg-white/20 duration-150 rounded-lg"
+                target="_blank"
+              >
+                <span class="mr-1.5">View</span>
+                <GitBranchIcon class="size-3"/>
+              </a>
             </div>
           </div>
         </div>
-      </a>
-    {/each}
-  </div>
-</div>
+      {/each}
+    </div>
+  {:else}
+    <p class="text-red-500">
+      Failed to fetch repositories.
+    </p>
+  {/if}
+</Section>

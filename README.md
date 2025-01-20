@@ -1,22 +1,21 @@
-## 📺 Demo
+# Personal Portfolio
 
-https://buraky.dev
+A responsive portfolio website built with Sveltekit and Tailwind CSS
 
-## 🚀 Getting Started
+# 📺 Demo
 
-Run the following commands to get started:
+[Live Demo](https://buraky.dev)  
+![GIF Preview](https://cdn.buraky.dev/personal-website.gif)
 
-```bash
-git clone https://github.com/BurakYs/personal-website.git
+# 🚀 Getting Started
 
-cd personal-website
+1. Run the following commands to get started:
 
-npm install
+    ```bash
+    git clone https://github.com/BurakYs/personal-website.git
+    cd personal-website
+    npm install
+    ```
 
-npm run dev
-```
-
-## 📦 Built With
-
-- [Svelte](https://svelte.dev/) - Cybernetically enhanced web apps
-- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development
+2. Change the `src/lib/config.ts` file to your information
+3. Optional, add your `GITHUB_TOKEN` to `.env` file for higher rate limits

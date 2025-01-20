@@ -1,27 +1,23 @@
 <script lang="ts">
+  import Section from '$components/Section.svelte';
   import config from '$lib/config';
 </script>
 
-<div>
-  <div class="text-2xl font-bold flex items-center text-white mb-3">
-    <i class="fas fa-book text-theme-color text-3xl mr-3"></i>
-    Technologies
-  </div>
-
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+<Section id="technologies" title="Technologies I Work With">
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl">
     {#each config.technologies as tech}
-      <div class="w-full duration-200 hover:scale-105">
-        <div class="border border-border bg-foreground rounded-lg p-2">
-          <div class="flex items-center">
-            <img
-              class="w-8 h-8 rounded-md mr-4"
-              src={`https://raw.githubusercontent.com/devicons/devicon/master/icons/${tech.slug}/${tech.slug}-original.svg`}
-              alt={tech.name}
-            />
-            <p class="text-sm font-bold text-white">{tech.name}</p>
-          </div>
-        </div>
+      <div
+        class="group flex justify-start items-center px-3 py-2 bg-gradient-to-r from-white/[0.07] to-white/5 border border-white/5 rounded-xl"
+      >
+        <img
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/{tech.slug}/{tech.slug}-original.svg"
+          alt={tech.name}
+          class="size-7 mr-3"
+        />
+        <span class="font-medium group-hover:text-gray-300 duration-150">
+          {tech.name}
+        </span>
       </div>
     {/each}
   </div>
-</div>
+</Section>
