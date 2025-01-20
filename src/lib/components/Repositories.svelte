@@ -4,7 +4,17 @@
   import StarIcon from 'lucide-svelte/icons/star';
   import Section from '$components/Section.svelte';
 
-  import type { Repository } from '$lib/types';
+  import config from '$lib/config';
+  import { onMount } from 'svelte';
+
+  type Repository = {
+    name: string;
+    description: string;
+    language: string;
+    url: string;
+    stars: number;
+    forks: number;
+  };
 
   const languageColors: Record<string, string> = {
     typescript: '#3178C6',
@@ -19,13 +29,37 @@
     python: '#3776AB'
   };
 
-  let { repositories }: { repositories: Repository[] } = $props();
+  let repositoryPromise = $state<Promise<Repository[]>>();
+
+  onMount(() => {
+    repositoryPromise = fetchRepositories();
+  });
+
+  async function fetchRepositories(): Promise<Repository[]> {
+    const response = await fetch(`https://api.github.com/users/${config.social.github}/repos`);
+    const data = await response.json();
+
+    return data
+      .filter((repo: any) => !repo.fork && ![repo.owner.login, '.github'].includes(repo.name))
+      .slice(0, 6)
+      .sort((a: any, b: any) => b.stargazers_count - a.stargazers_count)
+      .map((repo: any) => ({
+        name: repo.name,
+        description: repo.description,
+        language: repo.language,
+        url: repo.html_url,
+        stars: repo.stargazers_count,
+        forks: repo.forks_count
+      }));
+  }
 </script>
 
 <Section id="repositories" title="GitHub Repositories">
-  {#if repositories?.length}
+  {#await repositoryPromise}
+    <p>Loading...</p>
+  {:then repositories}
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {#each repositories as repo}
+      {#each repositories ?? [] as repo}
         <div
           class="bg-gradient-to-r from-white/10 to-white/5 rounded-xl p-5 border border-white/10 hover:border-white/20 duration-150"
         >
@@ -69,9 +103,9 @@
         </div>
       {/each}
     </div>
-  {:else}
+  {:catch error}
     <p class="text-red-500">
-      Failed to fetch repositories.
+      Failed to fetch repositories. Please try again later.
     </p>
-  {/if}
+  {/await}
 </Section>
