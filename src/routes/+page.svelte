@@ -8,9 +8,9 @@
   import Footer from '$components/Footer.svelte';
 
   import config from '$lib/config';
-  import type { Repository } from '$lib/types';
+  import type { PageData } from './$types';
 
-  let { data }: { data: { repositories: Repository[] } } = $props();
+  let { data }: { data: PageData } = $props();
 </script>
 
 <svelte:head>
