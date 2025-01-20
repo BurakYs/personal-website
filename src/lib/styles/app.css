@@ -2,6 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-* {
-    scroll-behavior: smooth;
+@layer base {
+    * {
+        @apply scroll-smooth
+    }
+
+    .gradient-text {
+        @apply bg-gradient-to-r from-gray-200 to-gray-400 text-transparent bg-clip-text
+    }
 }

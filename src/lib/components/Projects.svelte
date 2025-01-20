@@ -12,13 +12,11 @@
       <div
         class="bg-gradient-to-br from-white/10 to-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-white/20 duration-150 flex flex-col md:w-[22rem]"
       >
-        <div class="relative overflow-hidden h-40">
-          <img
-            src={project.thumbnail}
-            alt={project.title}
-            class="size-full object-cover"
-          />
-        </div>
+        <img
+          src={project.thumbnail}
+          alt={project.title}
+          class="size-full object-cover h-40"
+        />
 
         <div class="p-4 flex flex-col flex-grow">
           <h3 class="text-lg font-semibold mb-2">{project.title}</h3>

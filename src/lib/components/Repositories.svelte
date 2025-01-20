@@ -29,7 +29,7 @@
         <div
           class="bg-gradient-to-r from-white/10 to-white/5 rounded-xl p-5 border border-white/10 hover:border-white/20 duration-150"
         >
-          <div class="flex flex-col h-full">
+          <div class="flex flex-col">
             <div>
               <h3 class="font-semibold mb-1 flex items-center">
                 {repo.name}
@@ -37,7 +37,7 @@
               <p class="text-sm text-gray-400 mb-4">{repo.description}</p>
             </div>
 
-            <div class="mt-auto flex items-center justify-between pt-4 border-t border-white/10">
+            <div class="flex items-center justify-between pt-4 border-t border-white/10">
               <div class="flex items-center space-x-3 text-xs">
                 <span class="flex items-center text-white/60">
                   <span
