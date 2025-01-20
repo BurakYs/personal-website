@@ -18,4 +18,3 @@ A responsive portfolio website built with Sveltekit and Tailwind CSS
     ```
 
 2. Change the `src/lib/config.ts` file to your information
-3. Optional, add your `GITHUB_TOKEN` to `.env` file for higher rate limits
