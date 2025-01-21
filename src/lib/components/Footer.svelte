@@ -25,7 +25,7 @@
       target="_blank"
     >
       <img
-        src={`https://cdn.simpleicons.org/${social.name.toLowerCase()}/FFFFFF`}
+        src="https://cdn.simpleicons.org/{social.name.toLowerCase()}/FFFFFF"
         alt={social.name}
         class="size-6"
       />
