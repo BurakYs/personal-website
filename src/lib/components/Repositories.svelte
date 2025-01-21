@@ -1,11 +1,12 @@
 <script lang="ts">
+  import Section from '$components/Section.svelte';
+
   import GitBranchIcon from 'lucide-svelte/icons/git-branch';
   import GitForkIcon from 'lucide-svelte/icons/git-fork';
   import StarIcon from 'lucide-svelte/icons/star';
-  import Section from '$components/Section.svelte';
 
-  import config from '$lib/config';
   import { onMount } from 'svelte';
+  import config from '$lib/config';
 
   type Repository = {
     name: string;
