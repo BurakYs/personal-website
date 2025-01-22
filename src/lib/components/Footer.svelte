@@ -12,7 +12,7 @@
     },
     {
       name: 'Gmail',
-      href: `mailto:mail@${config.contactEmail}`
+      href: `mailto:${config.contactEmail}`
     }
   ];
 </script>
