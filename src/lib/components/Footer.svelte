@@ -4,7 +4,7 @@
   const socials = [
     {
       name: 'GitHub',
-      href: config.social.github
+      href: `https://discord.com/users/${config.social.github}`
     },
     {
       name: 'Discord',
