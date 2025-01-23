@@ -10,7 +10,7 @@
   <div class="grid gap-8 sm:grid-cols-2 grid-cols-1 lg:flex lg:flex-wrap">
     {#each config.projects as project}
       <div
-        class="bg-gradient-to-br from-white/10 to-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-white/20 duration-150 flex flex-col md:w-[22rem]"
+        class="bg-linear-to-br from-white/10 to-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-white/20 duration-150 flex flex-col md:w-[22rem]"
       >
         <img
           src={project.thumbnail}
@@ -18,7 +18,7 @@
           class="size-full object-cover h-40"
         />
 
-        <div class="p-4 flex flex-col flex-grow">
+        <div class="p-4 flex flex-col grow">
           <h3 class="text-lg font-semibold mb-2">{project.title}</h3>
           <p class="text-sm text-gray-400 mb-4">{project.description}</p>
 

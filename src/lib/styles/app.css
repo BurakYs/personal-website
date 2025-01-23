@@ -1,13 +1,15 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-xs: 425px;
+}
 
 @layer base {
     * {
-        @apply scroll-smooth
+        @apply scroll-smooth;
     }
 
     .gradient-text {
-        @apply bg-gradient-to-r from-gray-200 to-gray-400 text-transparent bg-clip-text
+        @apply bg-linear-to-r from-gray-200 to-gray-400 text-transparent bg-clip-text;
     }
 }
