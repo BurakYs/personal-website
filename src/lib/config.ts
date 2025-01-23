@@ -26,6 +26,7 @@ export default {
       description: 'Fortnite account management Discord bot',
       thumbnail: 'https://cdn.buraky.dev/banners/rookie-spitfire.png',
       url: 'https://rookie-spitfire.xyz',
+      repository: 'https://github.com/BurakYs/rookie-spitfire.xyz',
       tags: ['Svelte', 'Sass', 'TypeScript', 'MongoDB']
     }
   ],
