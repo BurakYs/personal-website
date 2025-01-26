@@ -8,7 +8,9 @@
     * {
         @apply scroll-smooth;
     }
+}
 
+@layer utilities {
     .gradient-text {
         @apply bg-linear-to-r from-gray-200 to-gray-400 text-transparent bg-clip-text;
     }
