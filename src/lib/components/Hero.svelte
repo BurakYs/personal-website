@@ -3,7 +3,7 @@
 </script>
 
 <section class="mt-64 flex flex-col items-start gap-y-2">
-  <h1 class="text-3xl xs:text-4xl sm:text-5xl font-bold">
+  <h1 class="text-3xl sm:text-5xl font-bold">
       <span class="gradient-text">
         Hello, I'm {config.name}
       </span>

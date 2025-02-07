@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-    --breakpoint-xs: 425px;
-}
-
 @layer base {
     * {
         @apply scroll-smooth;
