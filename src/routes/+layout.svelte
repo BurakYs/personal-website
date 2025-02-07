@@ -15,6 +15,13 @@
   <meta name="twitter:description" content={config.meta.description}/>
   <meta name="twitter:card" content="summary_large_image"/>
   <link rel="icon" href={config.meta.favicon}>
+
+  {#if config.plausibleAnalytics.enabled}
+    <script defer data-domain={config.plausibleAnalytics.domain} src={config.plausibleAnalytics.fileName}></script>
+    <script>
+      window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };
+    </script>
+  {/if}
 </svelte:head>
 
 <div class="min-h-[100dvh] bg-black text-white overflow-hidden">

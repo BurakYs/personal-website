@@ -40,5 +40,10 @@ export default {
     { name: 'Next.js', slug: 'nextjs' },
     { name: 'Sass', slug: 'sass' },
     { name: 'Tailwind', slug: 'tailwindcss' }
-  ]
+  ],
+  plausibleAnalytics: {
+    enabled: true,
+    domain: 'buraky.dev',
+    fileName: 'https://analytics.buraky.dev/js/script.file-downloads.hash.outbound-links.js'
+  }
 };
