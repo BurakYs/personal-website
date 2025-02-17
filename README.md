@@ -18,3 +18,5 @@ A responsive portfolio website built with Sveltekit and Tailwind CSS
     ```
 
 2. Change the `src/lib/config.ts` file to your information
+
+3. Run `npm run dev` to start the website
