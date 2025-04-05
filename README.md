@@ -5,6 +5,7 @@ A responsive portfolio website built with Sveltekit and Tailwind CSS
 ## 📺 Demo
 
 [Live Demo](https://buraky.dev)  
+
 ![GIF Preview](https://cdn.buraky.dev/previews/websites/personal.gif)
 
 ## 🚀 Getting Started
@@ -18,3 +19,5 @@ A responsive portfolio website built with Sveltekit and Tailwind CSS
     ```
 
 2. Change the `src/lib/config.ts` file to your information
+
+3. Run `npm run dev` to start the website
