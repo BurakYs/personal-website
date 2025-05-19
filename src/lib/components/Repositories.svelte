@@ -18,17 +18,11 @@
   };
 
   const languageColors: Record<string, string> = {
-    go: '#01ACD8',
-    typescript: '#3178C6',
-    javascript: '#F7DF1E',
-    html: '#E34C26',
-    css: '#1572B6',
-    scss: '#CC6699',
-    svelte: '#FF3E00',
-    vue: '#4FC08D',
-    react: '#61DAFB',
-    angular: '#DD0031',
-    python: '#3776AB'
+    rust: '#DEA584', c: '#555555', 'c++': '#F24A7D',
+    'c#': '#178701', java: '#B17218', python: '#3776AB',
+    php: '#4E5C95', go: '#01ACD8', typescript: '#3178C6',
+    javascript: '#F7DF1E', html: '#E34C26', css: '#1572B6', scss: '#CC6699',
+    svelte: '#FF3E00', vue: '#4FC08D', react: '#61DAFB', angular: '#DD0031'
   };
 
   let repositoryPromise = $state<Promise<Repository[]>>();
