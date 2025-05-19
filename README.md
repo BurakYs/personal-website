@@ -15,7 +15,7 @@ A responsive portfolio website built with Sveltekit and Tailwind CSS
     ```bash
     git clone https://github.com/BurakYs/personal-website.git
     cd personal-website
-    npm install
+    pnpm install
     ```
 
 2. Change the `src/lib/config.ts` file to your information
