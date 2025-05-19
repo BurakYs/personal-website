@@ -15,7 +15,7 @@
         <img
           src={project.thumbnail}
           alt={project.title}
-          class="size-full object-cover h-40"
+          class="size-full object-cover h-42"
         />
 
         <div class="p-4 flex flex-col grow">

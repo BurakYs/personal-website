@@ -30,6 +30,13 @@ export default {
       url: 'https://rookie-spitfire.xyz',
       repository: 'https://github.com/BurakYs/rookie-spitfire.xyz',
       tags: ['Svelte', 'Sass', 'TypeScript', 'MongoDB']
+    },
+    {
+      title: 'Spitfire Launcher',
+      description: 'A launcher app for Fortnite and Epic Games',
+      thumbnail: 'https://cdn.buraky.dev/banners/spitfire-launcher-min.png',
+      repository: 'https://github.com/BurakYs/Spitfire-Launcher',
+      tags: ['Svelte', 'Tauri']
     }
   ],
   // Tech icons are fetched from https://github.com/devicons/devicon
