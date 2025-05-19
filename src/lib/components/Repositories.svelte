@@ -18,6 +18,7 @@
   };
 
   const languageColors: Record<string, string> = {
+    go: '#01ACD8',
     typescript: '#3178C6',
     javascript: '#F7DF1E',
     html: '#E34C26',

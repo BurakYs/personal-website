@@ -34,6 +34,7 @@ export default {
   ],
   // Tech icons are fetched from https://github.com/devicons/devicon
   technologies: [
+    { name: 'Go', slug: 'go', variant: 'original-wordmark' },
     { name: 'TypeScript', slug: 'typescript' },
     { name: 'Node.js', slug: 'nodejs' },
     { name: 'MongoDB', slug: 'mongodb' },
