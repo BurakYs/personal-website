@@ -65,8 +65,8 @@
         <div
           class="bg-linear-to-r from-white/[0.095] to-white/5 rounded-xl p-5 border border-white/10 hover:border-white/20 duration-150"
         >
-          <div class="flex flex-col">
-            <div>
+          <div class="flex flex-col h-full">
+            <div class="grow">
               <h3 class="font-semibold mb-1 flex items-center">
                 {repo.name}
               </h3>
