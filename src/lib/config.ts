@@ -19,7 +19,6 @@ export default {
       title: 'VidGet',
       description: 'Multi-platform video and audio downloader',
       thumbnail: 'https://cdn.buraky.dev/banners/vidget.png',
-      url: 'https://vidget.buraky.dev',
       repository: 'https://github.com/BurakYs/VidGet',
       tags: ['Svelte', 'TailwindCSS', 'Fastify']
     },
