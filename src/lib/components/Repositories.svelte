@@ -33,13 +33,13 @@
 
   async function fetchRepositories(): Promise<Repository[]> {
     const response = await fetch(`https://api.github.com/users/${config.social.github}/repos`);
-    const data = await response.json();
+    const data: any[] = await response.json();
 
     return data
-      .filter((repo: any) => !repo.fork && ![repo.owner.login, '.github'].includes(repo.name))
+      .filter((repo) => !repo.fork && ![repo.owner.login, '.github'].includes(repo.name))
       .slice(0, 6)
-      .sort((a: any, b: any) => b.stargazers_count - a.stargazers_count)
-      .map((repo: any) => ({
+      .sort((a, b) => b.stargazers_count - a.stargazers_count)
+      .map((repo) => ({
         name: repo.name,
         description: repo.description,
         language: repo.language,
