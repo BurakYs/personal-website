@@ -5,7 +5,7 @@ export default {
   contactEmail: 'contact@buraky.dev',
   meta: {
     title: 'Burak',
-    description: 'My personal website including my projects and skills',
+    description: 'My personal portfolio website including my projects and skills',
     favicon: 'https://avatars.githubusercontent.com/u/59135244?size=64'
   },
   social: {
