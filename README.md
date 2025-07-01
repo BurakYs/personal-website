@@ -13,8 +13,8 @@ A responsive portfolio website built with Astro and Tailwind CSS
 1. Run the following commands to get started:
 
    ```bash
-   git clone https://github.com/BurakYs/personal-website.git
-   cd personal-website
+   git clone https://github.com/BurakYs/portfolio-website.git
+   cd portfolio-website
    pnpm install
    ```
 
