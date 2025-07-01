@@ -1,12 +1,12 @@
-<script lang="ts">
-  import config from '$lib/config';
-</script>
+---
+import config from '../config';
+---
 
-<section class="mt-64 flex flex-col items-start gap-y-2">
+<section id="hero" class="mt-64 flex flex-col items-start gap-y-2">
   <h1 class="text-3xl sm:text-5xl font-bold">
-      <span class="gradient-text">
-        Hello, I'm {config.name}
-      </span>
+    <span class="gradient-text">
+      Hello, I'm {config.name}
+    </span>
     👋
   </h1>
   <h2 class="text-lg font-semibold text-white/60">
@@ -17,7 +17,7 @@
   </p>
 
   <a
-    href="mailto:{config.contactEmail}"
+    href={`mailto:${config.contactEmail}`}
     class="px-7 py-3 text-sm bg-white/10 hover:bg-white/20 duration-150 rounded-lg mt-1"
   >
     Contact Me

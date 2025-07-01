@@ -1,0 +1,27 @@
+---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import config from '../config';
+---
+
+<html lang="en">
+  <head>
+    <title>{config.meta.title}</title>
+    <meta name="description" content={config.meta.description} />
+    <meta name="og:title" content={config.meta.title} />
+    <meta name="og:description" content={config.meta.description} />
+    <meta name="twitter:description" content={config.meta.description} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link rel="icon" href={config.meta.favicon} />
+  </head>
+
+  <body class="min-h-[100dvh] bg-black text-white">
+    <main class="container mx-auto px-6 space-y-20">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

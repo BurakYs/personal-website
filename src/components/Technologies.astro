@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import Section from '../components/Section.astro';
+import config from '../config';
+
+const baseURL = 'https://raw.githubusercontent.com/devicons/devicon/master/icons';
+---
+
+<Section id="technologies" title="Technologies I Work With">
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl">
+    {
+      config.technologies.map((tech) => (
+        <div class="flex justify-start items-center px-3 py-2 bg-linear-to-r from-white/[0.095] to-white/5 border border-white/5 hover:border-white/10 rounded-xl">
+          <Image
+            src={`${baseURL}/${tech.slug}/${tech.slug}-${tech.variant || 'original'}.svg`}
+            alt={tech.name}
+            class="mr-3"
+            width={28}
+            height={28}
+            loading="eager"
+          />
+          <span class="font-medium duration-150">{tech.name}</span>
+        </div>
+      ))
+    }
+  </div>
+</Section>

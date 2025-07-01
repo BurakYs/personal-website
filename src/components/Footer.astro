@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets';
+import config from '../config';
+
+const socials = [
+  {
+    name: 'GitHub',
+    href: `https://github.com/${config.social.github}`
+  },
+  {
+    name: 'Discord',
+    href: `https://discord.com/users/${config.social.discord}`
+  },
+  {
+    name: 'Gmail',
+    href: `mailto:${config.contactEmail}`
+  }
+];
+---
+
+<footer class="flex justify-end container mx-auto p-6">
+  {
+    socials.map((social) => (
+      <a href={social.href} class="p-3 rounded-full" target="_blank" rel="noopener noreferrer">
+        <Image
+          src={`https://cdn.simpleicons.org/${social.name.toLowerCase()}/FFFFFF`}
+          alt={social.name}
+          width={24}
+          height={24}
+        />
+      </a>
+    ))
+  }
+</footer>

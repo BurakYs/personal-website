@@ -1,5 +1,3 @@
-import { PUBLIC_PLAUSIBLE_ENABLED } from '$env/static/public';
-
 export default {
   name: 'Burak',
   about: 'A student and a developer from Turkey specialized in web development',
@@ -49,10 +47,5 @@ export default {
     { name: 'Next.js', slug: 'nextjs' },
     { name: 'Sass', slug: 'sass' },
     { name: 'Tailwind', slug: 'tailwindcss' }
-  ],
-  plausibleAnalytics: {
-    enabled: PUBLIC_PLAUSIBLE_ENABLED === 'true',
-    domain: 'buraky.dev',
-    fileName: 'https://analytics.buraky.dev/js/script.file-downloads.hash.outbound-links.js'
-  }
+  ]
 };
